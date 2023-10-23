@@ -1,0 +1,35 @@
+\begin{frame}{Izračun približka $\pi$}
+    \section{Izračun približka $\pi$}
+    \tableofcontents[currentsection]
+\end{frame}
+
+
+\begin{frame}{Izračun približka $\pi$}
+
+    Prvo smo napisali funkcijo, kateri podamo število točk. Funkcija pa vrne matriki. 1. matrika vrne koordinate točk znotraj kroga, 2. matrika pa koordinate zunaj kroga.\\
+    Nato vzamemo število točk v matrikah in iz njih izračunamo približek $\pi$.\\
+    $$\pi = 4\cdot \frac{n_{znotraj}}{n_{znotraj} + n_{zunaj}}$$\\
+    Večje število točk uporabimo, manjšo napako dobimo.\\
+    $$n \xrightarrow{} \infty$$\\
+    Dobljene točke smo nato še grafično prikazali.
+    
+\end{frame}
+
+
+\subsection{Primerjava vrednosti $\pi(n)$}
+\begin{frame}{Primerjava vrednosti $\pi(n)$}
+
+    \begin{figure}[h!]
+        \centering
+        \includegraphics[width=6.8cm]{Slike/Primerjava_Pi.jpg}
+        \caption{Grafična primerjava vrednosti $\pi(n)$}
+        \label{fig:grafprimerjavepi}
+    \end{figure}
+
+\pause
+
+    \begin{block}{}
+    Kot se vidi, se izračunana vrednost $\pi$ prvo hitro in nato počasi približuje pravi vrednosti $\pi$.
+    \end{block}
+    
+\end{frame}

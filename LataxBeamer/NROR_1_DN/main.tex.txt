@@ -1,0 +1,33 @@
+\documentclass{beamer}
+\usepackage[slovene]{babel}
+\usepackage{blindtext}
+\usepackage{mathptmx}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+%\usepackage{index}
+\usepackage{multicol}
+\usetheme{Madrid}
+
+\title[1. Domača naloga]{1. Domača naloga}
+\author{Jan Obrovnik, 23211080}
+\date{23.10.2023}
+
+\begin{document}
+
+\input{Framei/Naslov}
+
+\input{Framei/Kazalo}
+
+\input{Framei/MetodaMonteCarlo}
+
+\input{Framei/PrimerjavaVrednostiPi}
+
+\input{Framei/Karakteristika_n}
+
+\input{Framei/Rezultati}
+
+\end{document}

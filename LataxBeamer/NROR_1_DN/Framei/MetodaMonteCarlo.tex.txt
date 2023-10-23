@@ -1,0 +1,22 @@
+\begin{frame}{Metoda Monte Carlo}
+    \section{Metoda Monte Carlo}
+    \tableofcontents[currentsection]
+\end{frame}
+
+
+\begin{frame}{Metoda Monte Carlo}
+    
+    Z uporabo metode Monte Carlo smo izračunali približek števila $\pi$.\\
+    \begin{block}{Razlaga metode}
+    Metoda temelji na enakomerni naključni porazdelitvi podatkov znotraj določenega območja.\\
+    Naključne podatke nato deterministično analiziramo in primerjamo med sabo.
+    \end{block}
+
+    \pause
+    
+    Območje za izračun števila $\pi$ je kvadratno z vrisanim krogom. Znotraj območja vrišemo naključne točke. Te točke ločimo na tiste ki se nahajjo znotraj kroga $n_{znotraj}$, in na tiste, ki so zunaj kroga $n_{zunaj}$.
+    \begin{exampleblock}{Izračun števila $\pi$}
+    $$\frac{\pi}{4} = \frac{n_{znotraj}}{n_{znotraj} + n_{zunaj}}$$
+    \end{exampleblock}
+    
+\end{frame}
