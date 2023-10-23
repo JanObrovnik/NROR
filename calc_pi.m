@@ -3,7 +3,7 @@ n = 500;
 vrednosti_pi = [];
 vrednosti_n = [];
 
-for i = .03:.03:5.5
+for i = .03:0.03:5.5
     [min_ko,max_ko] = mcc_pi(n);
     [izracunan_pi,odstopanje] = area_pi(min_ko,max_ko);
 
@@ -17,9 +17,28 @@ end
 %axis([0 vrednosti_n(length(vrednosti_n)) pi-.1 pi+.1])
 
 kroznica = @(x) (1-x.^2).^.5;
-plot(min_ko(:,1),min_ko(:,2),"r+",max_ko(:,1),max_ko(:,2),"b.",-1:.001:1,kroznica(-1:.001:1),"g",-1:.001:1,-kroznica(-1:.001:1),"g",'LineWidth',3)
+
+% Narišite graf
+figure;
+hold on;
+
+% Narišite točke in krožnico
+plot(min_ko(:,1), min_ko(:,2), 'r+', 'DisplayName', "točke v krogu");
+plot(max_ko(:,1), max_ko(:,2), 'b.', 'DisplayName', "točke v kvadratu in ne v krogu");
+x = -1:.001:1;
+plot(x, kroznica(x), 'g', 'LineWidth', 3, 'DisplayName', 'Krožnica');
+plot(x, -kroznica(x), 'g', 'LineWidth', 3, 'HandleVisibility', 'off'); 
+
+legend
+
+xlabel('X os');
+ylabel('Y os');
+title('Metoda Monte Carlo');
+
+hold off;
 
 toc
+
 
 function[izracunan_pi,odstopanje] = area_pi(min_ko,max_ko)
 
