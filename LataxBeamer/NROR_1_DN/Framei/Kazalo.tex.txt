@@ -1,4 +1,0 @@
-\begin{frame}{Kazalo}
-    %\section{Kazalo}
-    \tableofcontents[pausesections]
-\end{frame}

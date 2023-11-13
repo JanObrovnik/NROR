@@ -1,3 +1,0 @@
-\begin{frame}%{Naslovnica}
-    \maketitle
-\end{frame}
