@@ -10,25 +10,19 @@ using namespace std;
 
 vector<double> Izračun(int št_točk, vector<vector<double>> A, vector<double> b, vector<double> T, int iteracije = 2000) {
 
-#pragma omp parallel
-    {
-#pragma omp for
-        for (int i = 0; i < iteracije; i++) {
+#pragma omp parallel for
+    for (int i = 0; i < iteracije; i++) {
 
-#pragma omp parallel
-            {
-#pragma omp for
-                for (int i = 0; i < št_točk; i++) {
+#pragma omp parallel for
+        for (int i = 0; i < št_točk; i++) {
 
-                    double sum = 0;
+            double sum = 0;
 
-                    for (int j = 0; j < št_točk; j++) {
+            for (int j = 0; j < št_točk; j++) {
 
-                        if (i != j) sum += A[i][j] * T[j];
-                    }
-                    T[i] = (b[i] - sum) / A[i][i];
-                }
+                if (i != j) sum += A[i][j] * T[j];
             }
+            T[i] = (b[i] - sum) / A[i][i];
         }
     }
     return T;
